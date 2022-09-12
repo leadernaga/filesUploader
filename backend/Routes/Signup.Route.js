@@ -6,6 +6,7 @@ const Signup = Router()
 
 Signup.post('/', async (req, res) => {
   const { email, name, password } = req.body
+  console.log(req.body)
 
   if (!email || !name || !password) {
     return res.status(401).send({ message: 'enter every field' })
@@ -23,7 +24,7 @@ Signup.post('/', async (req, res) => {
 
     const response = await User.create({ name, email, password: hash })
 
-    res.status(200).send({ message: 'login successfull' })
+    res.status(200).send({ message: 'signup successfull' })
   } catch (e) {
     res.status(401).send(e.message)
   }

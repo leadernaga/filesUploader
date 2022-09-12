@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken')
 const Login = Router()
 
 Login.post('/', async (req, res) => {
-  const { email, eassword } = req.body
+  const { email, password } = req.body
 
   if (!email || !password) {
     res.status(401).send({ message: 'please Enter valid Credentials' })
