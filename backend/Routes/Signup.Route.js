@@ -30,3 +30,5 @@ Signup.post('/', async (req, res) => {
     res.status(401).send(e.message)
   }
 })
+
+module.export = Signup
