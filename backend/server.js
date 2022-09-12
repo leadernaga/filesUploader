@@ -15,6 +15,7 @@ app.use('/login', Login)
 app.use('/signup', Signup)
 app.get('/', (req, res) => {
   res.send('app is working')
+  console.log('naga')
 })
 
 app.listen(process.env.PORT || 8080, async () => {

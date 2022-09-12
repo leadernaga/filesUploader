@@ -18,8 +18,6 @@ Signup.post('/', async (req, res) => {
       return res.status(409).send({ message: 'user already exist' })
     }
 
-    const hash = bcrypt.hash(hash)
-    var bcrypt = require('bcryptjs')
     var salt = bcrypt.genSaltSync(10)
     var hash = bcrypt.hashSync(password, salt)
 
@@ -31,4 +29,4 @@ Signup.post('/', async (req, res) => {
   }
 })
 
-module.export = Signup
+module.exports = Signup
